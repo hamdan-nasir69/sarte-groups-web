@@ -61,17 +61,27 @@
 
 @media (max-width: 1024px) {
     .mission-div {
-        /* width: 85vw; */
-        /* height: auto; */
-        padding: 2rem 1.5rem;
+        width: 85vw;
     }
 }
 
 @media (max-width: 768px) {
+    .mission-div {
+        width: 90vw;
+        height: auto;
+        min-height: 50vh;
+        margin-top: 15vh;
+        right: 5vw;
+        padding: 3rem 0;
+        display: grid; 
+    }
 
     .mission-heading {
         position: relative;
         height: auto;
-        margin-bottom: 2rem;
+        grid-area: 1 / 1;
+        width: 100%;
+        padding: 0 1.5rem;
+        box-sizing: border-box;
     }
 }
