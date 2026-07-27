@@ -1,0 +1,184 @@
+.navbar{
+    width: 100%;
+    height: 25vh;
+    position: fixed;
+    z-index: 999;
+    background-color: #0D0D0D;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 8px 10px rgba(0,0,0,0.25);
+}
+
+nav{
+    height: 15vh;
+    font-size: 1.8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav img{
+    width: 8vw;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+nav ul{
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar.scrolled {
+  background: #FFF5E6;
+}
+
+nav a:hover{
+    color: #D69B4F;
+    transition: color 0.2s ease;
+}
+
+nav li{
+    text-decoration: none;
+    list-style-type: none;
+    height: 60px;
+}
+
+nav a{
+    height: 100%;
+    padding: 0 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #D9A758;
+}
+
+.navbar a:hover {
+    color: #D69B4F;
+}
+
+.top-nav{
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #D69B4F;
+    justify-self: center;
+}
+
+.top-nav ul{
+    width: 20%;
+    margin-left: auto;
+    display: flex;
+    justify-content: space-evenly;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+.top-nav a{
+    color: #F7C986;
+}
+
+.top-nav a:hover{
+    color: #D69B4F;
+    transition: color 0.2s ease;
+}
+
+.navbar.scrolled nav{
+  height: 20vh;
+}
+
+.navbar.scrolled{
+    height: 20vh;
+}
+
+.navbar.scrolled .top-nav {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-200px);
+}
+
+.sidebar{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 1;
+  background-color: #0D0D0D;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+  border-left: 1px solid #EAD3B7;
+  font-size: 4vw;
+  font-family: "Lato", sans-serif;
+}
+
+.menuBtn{
+  display: none;
+  margin-bottom: auto;
+  margin-left: 70vw;
+}
+
+.sidebar li{
+  width: 100%;
+  height: 10px;
+  margin-top: 20%;
+}
+
+.sidebar a{
+  color: #EAD3B7;
+  height: 10%;
+}
+
+.sidebar .x-logo{
+  margin-bottom: 20%;
+}
+
+@media(max-width:1000px){
+    .navbar{
+        height: 18vh;
+    }
+    nav{
+        height:8vh;
+        font-size: 2.5vw;
+    }
+    .navbar.scrolled{
+        height: 18vh;
+    }
+}
+
+
+@media(max-width:700px){
+  .hideOnMobile,.quote-btn{
+    display: none;
+  }
+  .menuBtn{
+    display: inline-flex;
+    position: fixed;
+    /* justify-self: flex-end; */
+  }
+  .x-logo{
+    display: inline-flex;
+  }
+  .navbar{
+        height: 12vh;
+    }
+    nav{
+        height:10vh;
+        font-size: 2.5vw;
+    }
+    .navbar.scrolled{
+        height: 15vh;
+    }
+  .sarte-logo{
+    width: 15vw;
+    margin-right: 50vw;
+  }
+}

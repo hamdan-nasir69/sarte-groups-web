@@ -1,0 +1,39 @@
+
+.construction-hero-main {
+    width: 100%;
+    min-height: 100vh;
+    min-height: 100dvh; 
+    background-image: url('./assets/smoke-construction.jpg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    filter: brightness(0.7);
+    
+    padding: 1rem; 
+    box-sizing: border-box;
+}
+
+.construction-hero-main img {
+    width: 90%; 
+    max-width: 800px;
+    height: auto;
+    margin: auto;
+    margin-top: 15vw; 
+    filter: brightness(1.5);
+}
+
+@media (min-width: 768px) {
+    .construction-hero-main img {
+        width: 70%;
+        margin-top: 10vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    .construction-hero-main img {
+        width: 50%;
+        margin-top: 7vw;
+    }
+}

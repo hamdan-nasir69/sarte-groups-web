@@ -1,0 +1,88 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  background-color: #0D0D0D;
+}
+
+.hero img{
+  width: 40%;
+  height: auto;
+  object-fit: contain;
+  margin: 10vw;
+  opacity: 0;
+  z-index: 10;
+}
+
+.slide {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 8vh 6vw;
+}
+.overlay {
+  position: absolute; inset: 0;
+  background-color: #0D0D0D;
+  z-index: 0;
+}
+.slide-content { position: relative; z-index: 1; max-width: 50vw; margin: auto 0; text-align: left; }
+.slide-title { font-size: clamp(2rem, 5vw, 4rem); font-weight: 600; line-height: 1.1; margin: 0 0 1rem; }
+.slide-sub { font-size: 1.1rem; opacity: 0.85; max-width: 50ch; }
+
+.tile-nav {
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  z-index: 10;
+}
+
+.tile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid #F7C986;
+  border-radius: 8px;
+  min-width: 5px;
+  height: 44px;             
+  cursor: pointer;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+.tile:hover { 
+  border-color: #F7C986;
+}
+.tile.active { border-color: #F7C986; }
+
+.tile-label {
+  position: relative;
+  z-index: 2;
+  font-size: 0.9rem;
+  color: #fff;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.tile-fill {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 0%;
+  background: #F7C986;
+  opacity: 0.9;
+  z-index: 1;
+  will-change: height;
+  transition: height 80ms linear;
+}

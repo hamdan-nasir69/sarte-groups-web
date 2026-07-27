@@ -1,0 +1,19 @@
+.marketing-hero{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../assets/smoke-marketing.jpg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    filter: brightness(0.7);
+}
+
+.marketing-hero img{
+    width: 50%;
+    height: auto;
+    margin: auto;
+    margin-top: 7vw;
+    filter: brightness(1.5);
+}

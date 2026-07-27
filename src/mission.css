@@ -1,0 +1,77 @@
+.main-mission {
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-color: rgba(255,255,255,0.3);
+    background-blend-mode: lighten;
+    position: relative;
+    background-image: url('assets/bg-view.jpg');
+}
+
+.mission-div {
+    width: 70vw;
+    height: 70vh;
+    background-color: white;
+    position: absolute;
+    right: 0; 
+    margin-top: 20vh;
+    margin-left: auto;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 
+                0 2px 10px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+.mission-heading {
+    width: 90%;
+    height: 20vh;
+    opacity: 0;
+    position: absolute;
+    animation: fade 12s infinite;
+}
+
+.mission-heading:nth-child(1) {animation-delay: 4s;}
+.mission-heading:nth-child(2) {animation-delay: 8s;}
+.mission-heading:nth-child(3) {animation-delay: 12s;}
+
+.mission-heading h1 {
+    margin-top: -1vw;
+    font-size: clamp(1.2rem, 2.5vw, 2.2rem); 
+}
+
+.mission-heading h3 {
+    color: #62605C;
+    font-size: clamp(0.9rem, 1.2vw, 1.2rem); 
+}
+
+.mission-heading p {
+    font-size: clamp(0.85rem, 1vw, 1rem);
+}
+
+@keyframes fade {
+    0%   {opacity: 0;}
+    10%  {opacity: 1;}
+    30%  {opacity: 1;}
+    40%  {opacity: 0;}  
+    100% {opacity: 0;}
+}
+
+@media (max-width: 1024px) {
+    .mission-div {
+        /* width: 85vw; */
+        /* height: auto; */
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .mission-heading {
+        position: relative;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+}

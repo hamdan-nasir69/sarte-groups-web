@@ -1,0 +1,395 @@
+.construction-hero-main {
+    width: 100%;
+    min-height: 100dvh; 
+    background-image: url('./assets/smoke-construction.jpg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    filter: brightness(0.7);
+    padding: 1rem; 
+    box-sizing: border-box;
+}
+
+.construction-hero-main img {
+    width: 90%; 
+    max-width: 800px;
+    height: auto;
+    margin: auto;
+    margin-top: 15vw; 
+    filter: brightness(1.5);
+}
+
+@media (min-width: 768px) {
+    .construction-hero-main img {
+        width: 70%;
+        margin-top: 10vw;
+    }
+}
+
+@media (min-width: 1024px) {
+    .construction-hero-main img {
+        width: 50%;
+        margin-top: 7vw;
+    }
+}
+
+.main-construction-services {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    min-height: 100vh;
+    background-color: #FBE4C2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 5vw;
+    padding-top: 5vw;
+}
+
+.main-construction-services h1 {
+    font-size: clamp(1.5rem, 2.5vw, 2.8rem);
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    width: 100%; 
+    padding: 0 1rem;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+}
+
+.services-list {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.single-service {
+    width: 25vw;
+    height: 70vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: left;
+    margin-top: 2vw;
+}
+
+.service-img {
+    width: 100%;
+    height: 50%;
+}
+
+.service-img img {
+    object-fit: fill;
+}
+
+.construction-service {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    margin-top: 2vw;
+}
+
+.construction-service h2 {
+    font-size: clamp(1rem, 2vw, 1.4rem);
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.construction-service p {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+.construction-service button {
+    position: relative;
+    padding: 0.75rem 1.5rem;
+    background-color: transparent;
+    color: #7A6651;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 2px solid #7A6651;
+    border-radius: 4px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: color 0.3s ease;
+    z-index: 1;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.construction-service button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #7A6651;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.construction-service button:hover {
+    color: #FBE4C2;
+}
+
+.construction-service button:hover::after {
+    transform: scaleX(1);
+}
+
+.lower-services {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.popup-overlay {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; 
+}
+
+.service-popup {
+    width: 90vw;
+    height: 80vh;
+    background-color: #FBE4C2;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+    z-index: 10000;
+    overflow-y: scroll;
+}
+
+.close-div {
+    width: 2vw;
+    height: 2vw;
+    margin-left: auto;
+    margin-right: 2vw;
+}
+
+.close-div button {
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.service-popup h2 {
+    font-size: 2rem;
+}
+
+.service-overview p {
+    font-size: 1rem;
+    text-align: justify;
+}
+
+.service-overview {
+    width: 80%;
+    height: fit-content;
+    text-align: left;
+}
+
+.service-list {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.hover-service {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+}
+
+.service-box {
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    background: #FBE4C2;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+.box-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background: linear-gradient(to top, rgba(0,0,0,0.95) 20%, rgba(0,0,0,0.6) 80%, transparent 100%);
+    transition: transform 0.4s ease;
+    transform: translateY(calc(100% - 75px));
+    text-align: right;
+}
+
+.service-box:hover .box-content {
+    transform: translateY(0);
+}
+
+.box-content h2 {
+    margin: 0 0 8px;
+    font-size: clamp(1.1rem, 4vw, 1.5rem); 
+    line-height: 1.3;
+    color: black;
+}
+
+.box-content .description {
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.4s ease 0.2s;
+    color: #5A4D3C;
+}
+
+.service-box:hover .description {
+    opacity: 1;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: #FBE4C2;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #7A6651;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #5A4D3C;
+}
+
+@media (max-width: 1024px) {
+    .services-list, .lower-services, .service-list {
+        width: 100%; 
+        margin: 0 auto; 
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem; 
+    }
+
+    .hover-service {
+        width: 90%; 
+        margin: 0 auto;
+    }
+
+    .single-service {
+        width: 80%;
+        height: auto;
+        margin: 0 auto; 
+    }
+
+    .construction-service h2 {
+        line-height: 1.3;
+        font-size: 1.2rem;
+    }
+
+    .construction-service p {
+        font-size: 1rem;
+        opacity: 0.8;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-construction-services {
+        padding: 2rem 1rem;
+    }
+
+    .main-construction-services h1 {
+        /* font-size: 2.2rem; */
+    }
+
+    .single-service {
+        min-height: auto;
+    }
+
+    .construction-service button {
+        width: 100%; 
+        padding: 1rem;
+    }
+
+    .construction-service p {
+        font-size: 1rem;
+        opacity: 0.8;
+    }
+
+    .construction-service h2 {
+        line-height: 1.3;
+    }
+
+    .service-popup {
+        height: 90vh;
+        padding: 1rem;
+    }
+
+    .construction-service {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .construction-service button {
+        width: auto;
+        padding: 0.75rem 2rem; 
+        margin: 1rem auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-construction-services h1 {
+        margin-top: 1rem; 
+    }
+
+    .box-content {
+        text-align: center;
+        padding: 15px; 
+    }
+
+    .box-content h2 {
+        font-size: 1.1rem;
+    }
+
+    .box-content .description {
+        font-size: 0.85rem;
+    }
+}
