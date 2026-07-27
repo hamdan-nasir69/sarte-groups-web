@@ -1,5 +1,4 @@
 import './environment.css'
-import environment from './assets/environment.jpg'
 
 export default function AboutEnvironment(){
     return (

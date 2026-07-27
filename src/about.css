@@ -4,9 +4,9 @@
   position: relative;
 }
 
-.bg-swiper{
-    margin-bottom: auto;
-    height: 100vh;
+.bg-swiper {
+  margin-bottom: auto;
+  height: 100vh;
 }
 
 .bg-slide {
@@ -33,21 +33,23 @@
   text-align: left;
 }
 
-.bg-overlay-heading{
-    width: 50%;
-    margin-right: auto;
-    margin-left: 5vw;
-    margin-top: auto;
-    margin-bottom: 5vh;
+.bg-overlay-heading {
+  width: 50%;
+  margin-right: auto;
+  margin-left: 5vw;
+  margin-top: auto;
+  margin-bottom: 8vh;
 }
 
 .bg-overlay h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  margin-bottom: 15px;
+  line-height: 1.2;
 }
 
 .bg-overlay p {
-  font-size: 1.2rem;
+  font-size: clamp(0.9rem, 1.5vw, 1.2rem);
+  line-height: 1.5;
 }
 
 .swiper-button-prev,
@@ -61,6 +63,19 @@
 
 .swiper-pagination-bullet-active {
   background: white;
+}
+
+@media (max-width: 1024px) {
+  .bg-overlay-heading {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .bg-overlay-heading {
+    width: 90%;
+    margin-bottom: 12vh;
+  }
 }
 
 .about-description {
@@ -126,7 +141,6 @@
     }
 }
 
-/* ---------------- Base ---------------- */
 .hover-container {
   display: flex;
   justify-content: center;
@@ -273,4 +287,3 @@
     font-size: 1.5rem;
   }
 }
-

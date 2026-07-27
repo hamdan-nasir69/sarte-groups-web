@@ -32,6 +32,10 @@
     display: flex;
     align-items: center;
 }
+.nav-link {
+  text-decoration: none;
+  color: inherit; 
+}
 
 .people-about-heading button:hover{
     text-decoration: underline;
