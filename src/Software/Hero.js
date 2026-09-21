@@ -1,5 +1,5 @@
 import './hero.css'
-import logo from '../assets/logo.png'
+import logo from '../assets/Sarte Software Logo No Background.png'
 
 export default function Hero(){
     return (
