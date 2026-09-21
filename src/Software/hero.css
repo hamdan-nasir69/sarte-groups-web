@@ -1,19 +1,60 @@
-.software-hero-main{
+.software-hero-main {
+    position: relative;
     width: 100%;
-    height: 100vh;
+    height: 75vh;
+    min-height: 450px;
     background-image: url('./assets/smoke-software.jpg');
     background-size: cover;
-    background-position: center center;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    filter: brightness(0.7);
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
-.software-hero-main img{
+.software-hero-main::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.software-hero-main img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 50%;
+    max-width: 750px;
     height: auto;
-    margin: auto;
-    margin-top: 7vw;
-    filter: brightness(1.5);
+    margin: 0;
+    z-index: 2;
+    filter: brightness(1.15);
+}
+
+@media (max-width: 1024px) {
+    .software-hero-main img {
+        width: 65%;
+    }
+}
+
+@media (max-width: 768px) {
+    .software-hero-main {
+        height: 65vh;
+        min-height: 400px;
+    }
+
+    .software-hero-main img {
+        width: 78%;
+    }
+}
+
+@media (max-width: 480px) {
+    .software-hero-main {
+        height: 60vh;
+        min-height: 350px;
+    }
+
+    .software-hero-main img {
+        width: 88%;
+    }
 }
