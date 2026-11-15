@@ -1,5 +1,6 @@
 import './footer.css'
-import logo from './assets/logo.png'
+// import logo from './assets/logo.png'
+import logo from './assets/Sarte Logo.png'
 import linkedin from './assets/linkedin-icon.svg'
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
@@ -14,7 +15,9 @@ export default function Footer() {
                     industries. Guided by excellence and responsibility, we help shape businesses, build infrastructure,
                     and drive digital transformation.</p>
 
-                <img src={linkedin} className='icon'></img>
+                <a href="https://www.linkedin.com/company/sarte-groups/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
+                    <img src={linkedin} className='icon'></img>
+                </a>
             </div>
             <div className='right-footer'>
                 <div className='right-footer-part'>
